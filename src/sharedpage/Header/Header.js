@@ -1,20 +1,28 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import TopHeader from './TopHeader';
 
 const Header = () => {
     return (
         <div>
-          <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Cryptic Media</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+        <TopHeader></TopHeader>
+          <nav className="navbar navbar-expand-lg bg-body-tertiary text-light "
+          style={{"backgroundColor": "rgb(14, 168, 168)"}}>
+  <div className="container-fluid">
+  <Link to='/' className="navbar-brand fs-3 text-light fw-bold">
+  Cryptic Media</Link>
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-      <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled">Disabled</a>
+    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div className="navbar-nav ">
+       <Link className="nav-link text-light active"> Shows </Link>
+       <Link className="nav-link text-light active"> People </Link>
+       <Link className="nav-link text-light active"> Network </Link>
+       <Link  className="nav-link text-light active"> Web Channel  </Link>
+       <Link className="nav-link text-light active"> Article </Link>
+       <Link className="nav-link text-light active"> Shows </Link>
+      
       </div>
     </div>
   </div>

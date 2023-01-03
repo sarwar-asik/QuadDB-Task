@@ -19,7 +19,7 @@ const Home = () => {
 
   return (
     <div>
-      <h1 className="my-5"> this is Home </h1>
+      <h1 className="my-5 text-secondary"> Our Movies </h1>
 
       <div class="row  row-cols-1 row-cols-sm-2 row-cols-md-4 g-2">
         {data?.map((movie) => {
@@ -47,7 +47,7 @@ const Home = () => {
                 />
                 <div class="card-body">
                   <h5 class="card-title">{name}</h5>
-                  <p class="card-text">
+                  <p class="card-text text-secondary">
                     {details.length<70?details:details.slice(0,100)+"...... See more"}
                   </p>
                   <button onClick={()=> handleClick(movie)} className="btn btn-primary">

@@ -6,3 +6,35 @@
     max-width: 80%;
     margin: 5px auto;
 }
+.btngroup{
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    
+}
+.btngroup button{
+    border: none;
+    padding: 15px ;
+    border-radius: 10px;
+
+}
+.btngroup button:hover{
+    background-color: rgb(14, 168, 168);
+    color: aliceblue;
+}
+
+.topHeaderContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links{
+   text-decoration: none;
+   padding: 10px;
+   color:white;
+   margin: auto 5px;
+
+}
+.links:hover{
+    color:rgb(14, 168, 168);;
+}
