@@ -35,3 +35,9 @@
 .links:hover {
   color: rgb(14, 168, 168);
 }
+
+.btnDetails{
+    background-color: rgb(14, 168, 168);
+  color: aliceblue;
+    
+}

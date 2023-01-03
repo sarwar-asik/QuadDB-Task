@@ -20,14 +20,13 @@ const Footer = () => {
           <b> Whats App</b> +8801602819933
         </p>
       </aside>
-      <aside>
+      <aside className="d-block">
         <p>Github Repository :</p>
         <a
           className="links"
           href="https://github.com/sarwar-asik/QuadDB-Task"
           target={"_blank"}
-        >
-               
+        >  
           Source Code
         </a>
       </aside>

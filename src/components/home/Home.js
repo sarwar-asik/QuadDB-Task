@@ -51,14 +51,14 @@ const Home = () => {
                 />
                 <div class="card-body">
                   <h5 class="card-title">{name}</h5>
-                  <p class="card-text text-secondary">
+                  <p class="card-text text-secondary"  onClick={() => handleClick(movie)}>
                     {details.length < 70
                       ? details
-                      : details.slice(0, 100) + "...... See more"}
+                      : details.slice(0, 110) + " ...... See more"}
                   </p>
                   <button
                     onClick={() => handleClick(movie)}
-                    className="btn btn-primary"
+                    className="btn btn-primary btnDetails"
                   >
                     Details
                   </button>

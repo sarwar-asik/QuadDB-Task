@@ -3,7 +3,7 @@ import { toast } from "react-toastify";
 
 const ModalDetails = ({ state }) => {
   //   console.log(show);
-  const {name, type,language,summary, } = state?.show;
+  const { name, type, language, summary } = state?.show;
 
   const handleSumbmit = (event) => {
     event.preventDefault();
@@ -22,10 +22,7 @@ const ModalDetails = ({ state }) => {
     };
     const setBookings = JSON.stringify(bookings);
 
-    
-  const bookedItems = localStorage.getItem('movie');
-  
-
+    const bookedItems = localStorage.getItem("movie");
 
     localStorage.setItem("movie", setBookings);
 
@@ -110,7 +107,7 @@ const ModalDetails = ({ state }) => {
                   </button>
                   <input
                     type="submit"
-                    className="btn btn-primary"
+                    className="btn btn-primary btnDetails"
                     value={"Book Movie"}
                     data-bs-dismiss="modal"
                   />
