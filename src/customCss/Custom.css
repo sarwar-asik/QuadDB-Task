@@ -1,0 +1,8 @@
+.imagestyle{
+    height:350px;
+    width:100% 
+}
+.card-container{
+    max-width: 80%;
+    margin: 5px auto;
+}
