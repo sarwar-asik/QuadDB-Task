@@ -4,7 +4,7 @@ import "../../customCss/Custom.css";
 const Footer = () => {
   return (
     <div className="py-5 px-4 d-flex justify-content-between bg-secondary mt-5 ">
-      <aside className="d-flex ">
+      <aside className="d-flex flex-column ">
         <p className="text-light "> This is task project for Cryptic Media </p>
         <h6 className="text-black-50">Created By </h6>
         <p>

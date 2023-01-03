@@ -2,7 +2,6 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import "../../customCss/Custom.css";
 import "react-toastify/dist/ReactToastify.css";
-import { toast } from "react-toastify";
 import ModalDetails from "./ModalDetails";
 
 const Screen2 = () => {
@@ -34,7 +33,7 @@ const Screen2 = () => {
 
       <header className="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-2 bg-secondar">
         <section className="col">
-          <p className={`btngroup text-secondary`}>
+          <p className={`btngroup  text-secondary`}>
             {headerBtn?.map((btn) => {
               return (
                 <button className={`${btn.bg && btn?.bg}`}> {btn?.name}</button>
@@ -65,7 +64,7 @@ const Screen2 = () => {
           <h6>
                
             <b> Country :</b>   
-            {network.country?.name ? network.country.name : "United States"}   
+            {network?.country?.name ? network?.country.name : "United States"}   
           </h6>
           <h6>
                
@@ -73,7 +72,7 @@ const Screen2 = () => {
           </h6>
           <h6>
                
-            <b> Time-Zone:</b> {network.country?.timezone}   
+            <b> Time-Zone:</b> {network?.country?.timezone}   
           </h6>
         </section>
       </header>
