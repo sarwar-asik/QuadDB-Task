@@ -1,29 +1,21 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
 import "../../customCss/Custom.css";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 import { toast } from "react-toastify";
 import ModalDetails from "./ModalDetails";
 
 const Screen2 = () => {
   const { state } = useLocation();
   const { show } = state;
-//   console.log(show);
+  //   console.log(show);
   const {
-    url,
     name,
-    type,
-    genres,
-    language,
-    status,
-    officialSite,
-    rating,
-    country,
     image,
     summary,
-    premiered,
-    network
+    network,
   } = state?.show;
+
 
   const headerBtn = [
     { name: "Main", bg: "bg-secondary text-light" },
@@ -65,16 +57,24 @@ const Screen2 = () => {
               >
                 Book Movie
               </button>
-              <ModalDetails state={state}/>
-             
+              <ModalDetails state={state} />
             </div>
           </div>
         </section>
         <section className="col d-flex flex-column m-auto shadow p-5 text-secondary">
-          <h6> <b> Country :</b> {network.country?.name?network.country.name:'United States'} </h6>
-          <h6> <b> Genres:</b> {show?.genres[0]}  with {show?.genres[1]} </h6>
-          <h6> <b> Time-Zone:</b>  {network.country?.timezone} </h6>
-
+          <h6>
+               
+            <b> Country :</b>   
+            {network.country?.name ? network.country.name : "United States"}   
+          </h6>
+          <h6>
+               
+            <b> Genres:</b> {show?.genres[0]} with {show?.genres[1]}   
+          </h6>
+          <h6>
+               
+            <b> Time-Zone:</b> {network.country?.timezone}   
+          </h6>
         </section>
       </header>
     </div>

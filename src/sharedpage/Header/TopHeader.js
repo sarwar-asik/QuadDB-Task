@@ -17,8 +17,8 @@ const TopHeader = () => {
         />
       </div>
       <div>
-        <Link className="links fs-3"> Sign Up</Link>
-        <Link className="links fs-3"> Login </Link>
+        <Link className="links fs-5"> Sign Up</Link>
+        <Link className="links fs-5"> Login </Link>
       </div>
     </div>
   );

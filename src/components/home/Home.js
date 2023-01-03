@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../../customCss/Custom.css";
 const Home = () => {
-  const navigate  = useNavigate()
+  const navigate = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
     fetch(`https://api.tvmaze.com/search/shows?q=all`)
@@ -12,9 +12,9 @@ const Home = () => {
       });
   }, []);
 
-  const handleClick =movie =>{
-    navigate(`/details/${movie?.score}`,{state:movie})
-  }
+  const handleClick = (movie) => {
+    navigate(`/details/${movie?.score}`, { state: movie });
+  };
   //   console.log(data);
 
   return (
@@ -34,23 +34,32 @@ const Home = () => {
             country,
             image,
             summary,
-            premiered
+            premiered,
           } = movie.show;
-          const details = summary.replace(/(<([^>]+)>)/gi, "")
+          const details = summary.replace(/(<([^>]+)>)/gi, "");
           return (
             <div className="col card-container">
               <div className="card ">
                 <img
-                  src={image?.original?image?.original:"https://static.tvmaze.com/uploads/images/original_untouched/413/1034988.jpg"}
+                  src={
+                    image?.original
+                      ? image?.original
+                      : "https://static.tvmaze.com/uploads/images/original_untouched/413/1034988.jpg"
+                  }
                   className="card-img-top imagestyle"
                   alt="..."
                 />
                 <div class="card-body">
                   <h5 class="card-title">{name}</h5>
                   <p class="card-text text-secondary">
-                    {details.length<70?details:details.slice(0,100)+"...... See more"}
+                    {details.length < 70
+                      ? details
+                      : details.slice(0, 100) + "...... See more"}
                   </p>
-                  <button onClick={()=> handleClick(movie)} className="btn btn-primary">
+                  <button
+                    onClick={() => handleClick(movie)}
+                    className="btn btn-primary"
+                  >
                     Details
                   </button>
                 </div>
